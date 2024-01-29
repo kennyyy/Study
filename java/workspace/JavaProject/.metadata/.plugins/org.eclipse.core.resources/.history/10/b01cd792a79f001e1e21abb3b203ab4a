@@ -1,0 +1,5 @@
+package com.jdbc.example;
+
+public class EmployeeVO {
+
+}

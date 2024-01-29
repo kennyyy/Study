@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+body{
+    background-image: url(../images/bg.png);
+    background-size: cover;
+}
+.fix-top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: red;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 1000;
+}
+.header{
+    padding: 30px;
+    text-align: center;
+}
+.menu {
+    text-align: center;
+    background: #000;
+}
+.menu ul{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+   
+    overflow: hidden;
+    
+}
+.menu li{
+    float: left;
+
+}
+.menu a{
+    box-sizing: border-box;
+    display: block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    color: white;
+}
+.menu a:hover{
+    border: 5px solid white;
+    line-height: 50px;
+}
+.nav{
+
+    background: white;
+    padding: 20px 0;
+}
+.box{
+    text-align: center;
+    width: 950px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.item{
+    width: 20%;
+    float: left;
+    margin: 20px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+.menu-sticky{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.menu-sticky ul{
+    background: greenyellow;
+    text-align: center;
+}
+.menu-sticky ul li{
+    display: inline-block;
+}
+.menu-sticky ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+.content{
+    background-image: url(../images/ipad.jpg);
+
+    background-size: contain;
+    margin: 0 auto;
+    width: 700px;
+    height: 1660px;
+    position: relative;
+
+}
+
+.adv1{
+    position: absolute;
+    top : 0;
+    left: -220px;
+}
+.adv2{
+    position: absolute;
+    top : 140px;
+    left: -220px;
+}
+.adv3{
+    position: absolute;
+    top : 0;
+    right: -220px;
+}
+.adv4{
+    position: absolute;
+    top : 140px;
+    right: -220px;
+}

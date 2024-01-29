@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var i  = 1;
+        var sum = 0;
+        while(i <= 10){
+            sum+=i;
+            i++
+        }
+        console.log("합계 : ", sum);
+
+        ////////////////////////////////////////////
+        //단 var는 function scope이기 때문에 for문에서 
+        //var를 사용하면 전역변수로 선언된다.
+        ////////////////////////////////////////////
+    
+        for(var i = 1; i <= 10; i++){
+            console.log(i);
+        }
+
+        var arr = []
+        for(var i = 1; i <= 20; i++) {
+            arr.push(i)
+        }
+        console.log(arr);
+
+
+        ////////////////////////////////////////
+
+        var arr = [1,2,3,4,5];
+
+        //향상된 포문 for ~ in
+        for(var a in arr) {//인덱스 값을 a에 저장함
+            console.log(a, arr[a]); 
+        }
+        //key:value
+        var obj = {'a': 100, 'b' : 200, 'c': 300};
+
+        //object에서는 키를 담습니다.
+        for(var a in obj){
+            console.log(a, obj[a]);//key:value
+        }
+
+        ///////////////////////////////////////////////
+        //break - 반복중단, continue - 반복다음
+
+        for (var i = 0; i < array.length; i++) {
+            if(i === 3) break; //continue;
+            console.log(arr[i]);
+            
+        }
+
+
+
+
+
+
+
+
+
+
+   
+    </script>
+</body>
+</html>

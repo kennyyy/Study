@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ include file = "../include/header.jsp" %>
+<% response.setHeader("Refresh", "10"); %>    
+<h3>여기는 결과방 입니다.</h3>
+<h5>현재 사람들이 선택한 좌석</h5>
+<hr>
+
+<div>
+	
+</div>
+ 방 리스트로 돌아간다.
+<input type="button" value="돌아가기" class="btn btn-default" onclick="location.href='./apply_list.jsp'; ">
+
+<%@ include file = "../include/footer.jsp" %>
+
+

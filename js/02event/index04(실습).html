@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>이 셀렉트 태그에는 change라는 이벤트를 걸기(이벤트를 거는 방법은 자유)</h3>
+    
+    <select onchange="change(); alert('onchange2');">
+        <option>홍길동</option>
+        <option>이순신</option>
+        <option>강감찬</option>
+    </select>
+
+    <h3>focus이벤트와, blur이벤트를 걸기</h3>
+    이름 : <input type="text" id="input"  value="">
+
+    <h3>mouseenter이벤트 걸기</h3>
+
+    <div style="width: 500px; height: 500px; border: 1px solid #999999;" id="box">
+    </div>
+
+    <script>
+        // 인라인 이벤트
+        function change(){
+            alert("onChange");
+        }
+
+        //표쥰이벤트
+        var input = document.getElementById("input");
+        input.placeholder="안녕";
+        input.addEventListener("focus", function(){
+            input.value="focus상태";
+        })
+        input.addEventListener("blur", function(){
+            input.value="blur상태";
+        })
+
+
+        //기본이벤트
+        var box = document.getElementById("box");
+
+        box.onmouseenter = function(){
+            alert("hi");
+        }
+        box.onmouseleave = function(){
+            alert("bye");
+        }
+
+    </script>
+</body>
+</html>

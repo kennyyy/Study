@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체
+        var a = { //키 : 값
+            name : '홍길동',
+            age : 20,
+            arr : [1,2,3],
+            func : function(){ 
+                console.log("나는function");
+            }
+        }
+        //사용법 2가지
+        console.log(typeof a);
+        console.log(a.age, a.arr, a.name );
+        a.func()
+        
+        //2nd
+        console.log( a["name"] )
+        console.log( a["age"] )
+        console.log( a["arr"] )
+        console.log( a["arr"][0] )
+        console.log( a["func"] )
+        a["func"]()
+        
+        console.log("---------------------------------------------------")
+        ///////////////////////////////////////
+        //객체안에 객체
+        var exam = {
+            math:80,
+            eng:70,
+            kor:90
+        };
+
+        var person = {
+            name : "이순신",
+            exam : /*exam or */ { math:80, eng:70, kor:90 } 
+        };
+        console.log(person.exam.eng);
+        console.log(person["exam"].eng);
+        console.log(person["exam"]["eng"]);
+        /////////////////////////////////////////
+        //배열안에 객체
+        var arr = [
+            {id : 1, title: 'hello1', regdate: '2020-11-12'},
+            {id : 2, title: 'hello2', regdate: '2020-11-13'},
+            {id : 3, title: 'hello3', regdate: '2020-11-14'}
+        ]
+
+        console.log(arr[0].id);
+        console.log(arr[0]["id"]);
+        ////////////////////////////////////////
+        //arr을 반복을 돌리고, 그 안에 있는 값을 전부 출력.
+
+        for(i in arr){
+            console.log(arr[i].id);
+            console.log(arr[i].title);
+            console.log(arr[i].regdate);
+        }
+        /////////////////////////////////////////
+        //2nd 객체 선언방법 - function()을 사용합니다.
+        //this키워드로 변수를 나타내면, 객체생성시 변수가 됩니다.
+
+
+        function Student(age){
+            this.name = "홍길동";
+            this.age = age;
+            this.getInfo = function(){
+                return this.age;
+            }
+            this.setInfo = function(age){
+                this.age = age;
+            }
+        }
+        // var s = new Studeent();
+        var s = new Student(20);
+        console.log(s);
+        s.setInfo(30);
+        console.log(s.getInfo());
+
+    </script>
+    
+</body>
+</html>

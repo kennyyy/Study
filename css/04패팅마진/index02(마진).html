@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ background-image: url(./img/bg_grid.jpg);}
+    
+    
+        .abox{
+            width: 500px;
+            height: 100px;
+            border: 1px solid #777;
+            background-color: aqua;
+            
+            /* margin: 0; 4방향 */
+            /* margin: 10px 30px; 상하, 좌우 */
+            /* margin: 10px 20px 50px; 상, 좌우, 하 */
+
+             /* 위, 오른쪽, 아래, 왼쪽 (시계 방향)*/
+            margin: 10px 20px 50px 20px; 
+
+
+            /* 
+            margin-top: 20px;
+            margin-right: 30px;
+            margin-bottom: 40px;
+            margin-left: 50px; */
+            
+
+
+        /* 박스를 가운데로 보내고 싶을때, 박스의 너비를 지정하고 margin: 0 auto 를 활용한다 */
+        /* 상자를 정 가운데로 보낼 때 (단 조건 - 상자의 너비가 지정이 되야함) */
+        }
+        .box{  
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+ 
+    <p class="abox">
+        마진은 상자간에 거리를 이격(딱 맞지 않고 벌어진 틈이 있는 경우)할 때 사용합니다. 
+        (마진은 서로 겹친다 : 서로 마진이 겹칠 경우 둘중 마진이 더 큰 쪽이 적용된다.)
+    </p>
+
+    <p class="abox box">
+        마진은 상자간에 거리를 이격(딱 맞지 않고 벌어진 틈이 있는 경우)할 때 사용합니다. 
+        (마진은 서로 겹친다 : 서로 마진이 겹칠 경우 둘중 마진이 더 큰 쪽이 적용된다.)
+    </p>
+
+
+</body>
+</html>

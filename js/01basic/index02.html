@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //var 키워드 스코프 : 자바스크립트에서 변수의 스코프(scope)는 코드 블록({ })이 아닌 함수 단위
+
+        a = 1; //이렇게 해도 변수선언이 된다.
+        console.log(a);
+
+        var a = 2;//숫자
+        var a = 'hi';//문자
+        var b = "10"//문자
+
+        console.log(a, b);
+
+
+        //데이터 타입을 동적으로 변경할 수도있다.
+        b = "hello"; //변수의 변경
+        a = 3.14;//변수의 변경
+
+        console.log(a);
+        var a = true;
+        console.log(a);
+
+        console.log(a);
+
+        var c = a + b;
+
+        console.log(a + b); //문자
+        console.log(a, b, c);//쉼표로 변수 구분
+
+        /////////////////////////////////////////////////////////////////////
+
+        var y; //값을 선언했는데, 초기값을 지정하지 않는 경우 undefined
+        console.log(y);
+
+        var z = document.getElementById("aaa");//초기값은 들어갔지만, 값이 없는경우
+        console.log(z);
+
+        //타입을 확인하는 키워드 typeof
+
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof y);
+        console.log(typeof z);
+
+    </script>
+
+</body>
+
+</html>

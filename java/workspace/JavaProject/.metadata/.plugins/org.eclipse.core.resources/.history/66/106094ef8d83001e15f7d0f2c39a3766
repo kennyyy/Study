@@ -1,0 +1,33 @@
+package quiz16;
+
+import java.util.Scanner;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Marine marine = new Marine(0,0);
+		Scanner sc = new Scanner(System.in);
+		exit:while(true) {
+			System.out.println("1. 위치출력 2. 마린이동 3.마린정지(종료)");
+			int num = sc.nextInt();
+			switch (num) {
+			case 1:
+				marine.location();
+				break;
+			case 2:
+				marine.move(5, 5);
+				break;
+			case 3:
+				marine.stop();
+				break exit;
+			default:
+				System.out.println("잘못 입력");
+				break;
+			}
+			
+		}
+		
+
+	}
+
+}

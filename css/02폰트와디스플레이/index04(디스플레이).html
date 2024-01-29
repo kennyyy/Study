@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /*
+         - 박스 관련속성 - 
+         width, height은 블록에만 줄 수 있습니다.
+
+
+        */
+        *{
+            margin: 0; padding: 0;
+        }
+
+        .abox div{
+            /* 배치구도를 - 인라인으로 */
+            display: inline;
+            /* width: 100px;  박스관련속성은 inline에서 사용못함 */
+            
+        }
+        
+        .bbox span, .bbox strong, .bbox b{
+            /* 배치구도를 - 블럭으로 */
+            display: block;
+            height: 100px;
+        }
+        .cbox{
+            /* 안보이게 */
+            display: none;
+        }
+        .dbox{
+            display: inline-block;
+        }
+        .dbox a{
+            /* 인라인(가로) 배치를 하되, 블록속성을 받게함 */
+            display: inline-block; 
+            width: 100px;
+            height: 100px;
+
+            border: 1px solid #777;
+            text-align: center;
+            line-height: 100px;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+    </div>
+
+    <div>
+        <span>인라인</span>
+        <strong>인라인</strong>
+        <b>인라인</b>
+    </div>
+    <hr>
+
+    <div class="abox">
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+    </div>
+
+    <div class="bbox">
+        <span>인라인</span>
+        <strong>인라인</strong>
+        <b>인라인</b>
+    </div>
+
+    <div class="cbox">
+        디스플레이 : none
+    </div>
+
+    <div class="dbox">
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+    </div>
+    
+</body>
+</html>

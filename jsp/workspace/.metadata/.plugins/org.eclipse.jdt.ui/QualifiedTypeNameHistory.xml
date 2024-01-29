@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.myweb.user.model.UserVO"/>
+    <fullyQualifiedTypeName name="com.myweb.board.service.BoardService"/>
+    <fullyQualifiedTypeName name="com.myweb.board.service.BoardServiceImpl"/>
+    <fullyQualifiedTypeName name="com.myweb.util.JdbcUtil"/>
+    <fullyQualifiedTypeName name="com.myweb.board.model.BoardDAO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.sa.util.JdbcUtil"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="com.sa.apply.model.ApplyDAO"/>
+    <fullyQualifiedTypeName name="com.sa.apply.model.OptionDAO"/>
+    <fullyQualifiedTypeName name="com.sa.apply.model.SeatDAO"/>
+    <fullyQualifiedTypeName name="com.sa.apply.service.ApplyService"/>
+    <fullyQualifiedTypeName name="com.sa.apply.model.SeatVO"/>
+    <fullyQualifiedTypeName name="com.sa.apply.model.OptionVO"/>
+    <fullyQualifiedTypeName name="com.sa.apply.service.ApplyServiceImpl"/>
+    <fullyQualifiedTypeName name="com.sa.apply.model.ApplyVO"/>
+    <fullyQualifiedTypeName name="javax.servlet.Filter"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebFilter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.websocket.Session"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

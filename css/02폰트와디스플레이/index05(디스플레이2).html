@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul, li,dl, dd, ol {
+             list-style: none; 
+        }
+
+        .gnb {
+            text-align: center;
+            background: #000;
+        }
+        .gnb > li {
+            display: inline-block;
+        }
+        .gnb > li > a{
+            display: block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+        }
+        .gnb > li > a:hover{
+            background-color: #555;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <!-- <header>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul, li,dl, dd, ol {
+             list-style: none; 
+        }
+
+        .nav2{
+            text-align: center;
+        }
+        .gnb2 {
+            text-align: right;
+            background: #000;
+        }
+        .gnb2 > li{
+            display: inline-block;
+        }
+        .gnb2 > li > a{
+            display: block;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            line-height: 100px; 
+            text-decoration: none;
+            color: white;
+        }
+        .gnb2 > li > a:hover{
+            background: #555;
+        }
+    </style>
+
+    <header>
+        <nav class="nav2">
+            <div class="logo">
+                <img src="./img/css3.png" alt="이미지">
+            </div>
+            <ul class="gnb2">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

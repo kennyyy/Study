@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 1008px;
+            margin: 0 auto;
+            border: 10px solid black;
+            box-sizing: border-box;
+        }
+        /* @media [only | not] 미디어 유형 [and 조건] * [and 조건] */
+        
+        /* 최소너비 767 = 767이상에서 동작하는 디자인 */
+        @media (min-width: 767px) {
+            .box{
+            background: #000;
+            }
+        }
+        /* 최대너비 766 = 766이하에서 동작하는 디자인 */
+        @media (max-width: 766px){
+            .box{
+                width: 646px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h3>미디어쿼리(반응형 디자인)</h3>
+
+    <div class="box">
+        내용............
+    </div>
+</body>
+</html>

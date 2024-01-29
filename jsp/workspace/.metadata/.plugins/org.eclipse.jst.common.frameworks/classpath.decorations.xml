@@ -1,0 +1,7 @@
+<classpath>
+  <container id="JSPBasic!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/user/Desktop/course/java/workspace/JavaProject/jsp/workspace/JSPBasic/src/main/webapp/WEB-INF/lib/jstl.jar">
+      <source-attachment-path>C:/Users/user/Desktop/course/java/workspace/JavaProject/jsp/jakarta-taglibs-standard-1.1.2-src.zip</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

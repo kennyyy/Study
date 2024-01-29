@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>자바스크립트 카운트</h3>
+
+    <input type="number" id="text"  value="0">
+    <button  onclick="count(this)" value="1">+</button>
+    <button  onclick="count(this)" value="-1">-</button>
+
+    <script>
+        function count(e){
+            var text = document.getElementById("text");
+            //text.value = parseInt(text.value) + parseInt(e.value);
+
+            if(e.innerHTML === "+"){
+                text.value++;
+            }else{
+                if(text.value <= 0) return;
+                text.value--;
+            }
+   
+        }
+    </script>
+    <hr>
+            
+    
+
+        <div>
+            좌석 : 
+            1<input type="checkbox" name="seat" value="1" >
+            2<input type="checkbox" name="seat" value="2">
+            3<input type="checkbox" name="seat" value="3">
+            4<input type="checkbox" name="seat" value="4">
+            5<input type="checkbox" name="seat" value="5">
+            6<input type="checkbox" name="seat" value="6">
+            7<input type="checkbox" name="seat" value="7">
+            8<input type="checkbox" name="seat" value="8">
+            9<input type="checkbox" name="seat" value="9">
+            10<input type="checkbox" name="seat" value="10">
+        </div>
+
+        <button onclick="reserve()">예약</button>
+
+        <div>
+            예약번호 : 
+            <div id="revNum">
+            
+            </div>
+        </div>
+
+        
+
+    <script>
+        var seat = document.getElementsByName("seat");
+        var revNum = document.getElementById("revNum");
+        
+        
+        function reserve(){
+            var result =[];
+
+
+            for(i in seat){
+                if(seat[i].checked){
+                    result.push(seat[i].value);
+                }
+            }
+
+            if(result.length == 0){
+                alert("최소한 1개이상 체크하여 주세요.")
+            }
+        
+            revNum.innerHTML = result.join("번") + "번";
+        }
+
+
+
+    </script>
+
+    <pre>
+        1. 예약버튼 클릭시 좌석이 최소한개이상 체크되어있지 않다면 경고창을 띄우는 코드를 작성하세요.
+        2. 체크된 값은 예약확인란에 출력해주세요.
+        3. 힌트 - 버튼클릭시 배열에 값을 저장하고, 화면에는 문자열로 만들어 출력 합니다.😊
+    </pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 웹폰트 link방식 -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"> -->
+   
+    <!-- 웹폰트 import 방식-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+    </style>
+
+    <style>
+   
+    /* 사용자의 컴퓨터에 설치되지 않은 폰트를 사이트에서 이용하려면 
+        폰트파일을 구해서 @font-face를 이용하여 경로와 이름을 넣어주면된다.
+    */
+    @font-face { 
+        font-family: 'MyGugi'; 
+        font-weight: 400; 
+        src: url(NanumSquareR.woff) format('woff'), 
+            url(Gugi-Regular.ttf) format('truetype'); 
+    }
+
+    body {
+        font-family: "MyGugi","Gugi", sans-serif;
+        font-weight: bold;
+        /* 글씨 스타일 */
+        font-style: italic;
+        /* 자간 */
+        letter-spacing: 30px;
+    }
+    </style>
+
+
+
+
+</head>
+<body>
+    <p>헬로 월드</p>
+    <h3>웹폰트?</h3>
+
+
+
+    <section>
+        <div>
+            <form>
+                <h4>웹폰트???</h4>
+            </form>
+        </div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,73 @@
+package com.myweb.user.model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.myweb.util.JdbcUtil;
+
+public class UserDAO {
+	//싱글톤
+	
+	private static UserDAO instance = new UserDAO();
+	
+	private UserDAO() {
+		try {
+			
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static UserDAO getInstance() {
+		return instance;
+	}
+	///////////////////////////////////////
+	
+	private String url = JdbcUtil.url;
+	private String uid = JdbcUtil.uid;
+	private String upw = JdbcUtil.upw;
+	
+	public int idCheck(String id) {
+
+		int result= 0;
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from users where id = ?";
+		
+		try {
+			
+			conn = DriverManager.getConnection(url, uid, upw);
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = 1;//중복의 의미
+			}else {
+				result = 0;//중복이 x
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.colse(conn, pstmt, rs);
+		}
+		
+		
+		
+		return result;
+	}
+
+	public void insertUser(UserVO vo) {
+		
+	}
+}

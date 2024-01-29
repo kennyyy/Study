@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Sat Jan 13 17:46:04 KST 2024
+org.eclipse.jst.jee.server\:Test=C\:\\Users\\user\\Desktop\\course\\java\\workspace\\JavaProject\\jsp\\apache-tomcat-9.0.84\\wtpwebapps\\Test
+org.eclipse.jst.jee.server\:JSPBasic=C\:\\Users\\user\\Desktop\\course\\java\\workspace\\JavaProject\\jsp\\apache-tomcat-9.0.84\\wtpwebapps\\JSPBasic
+org.eclipse.jst.jee.server\:SeatingsApply=C\:\\Users\\user\\Desktop\\course\\java\\workspace\\JavaProject\\jsp\\apache-tomcat-9.0.84\\wtpwebapps\\SeatingsApply
+org.eclipse.jst.jee.server\:JSPMyWeb=C\:\\Users\\user\\Desktop\\course\\java\\workspace\\JavaProject\\jsp\\apache-tomcat-9.0.84\\wtpwebapps\\JSPMyWeb

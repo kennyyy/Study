@@ -1,0 +1,107 @@
+<%@page import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<style>
+		.container{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.header{
+			width: 25%;
+			height: 100vh;
+			background-color: #26282A;;
+		}
+		.content{
+			width: 75%;
+			height: 100vh;
+			background-color: #888888;
+		}
+		
+	</style>
+<body>
+<%
+	/* response.setIntHeader("Refresh", 1);
+	Date date = new Date();
+	
+	out.println(date); */
+%>	
+	<div class = "container">
+		<div class ="header">
+			<div class="main_login_bar">
+      	<h1></h1>
+      
+      	<!-- main_login_box -->
+      	<div class="main_login_box login_form">
+        	<h3>LOGIN</h3>
+        	<form action="https://lms.kyonggi.ac.kr/login/index.php" method="post" class="loginform" novalidate="novalidate">
+        		        	<div class="form-group">
+	          		<input type="text" id="username" name="username" class="main_login_input required form-control" placeholder="사용자 아이디" value="">
+	        	</div>
+	        	<div class="form-group">
+	          		<input type="password" id="password" name="password" class="main_login_input required form-control" placeholder="비밀번호">
+	        	</div>
+	        	<div class="form-group">
+	          		<button type="submit" class="main_login_btn btn btn-default">Login</button>
+	        	</div>
+	        	<div class="login-remember">
+	          		<label class="main_login_txt">
+	            		<input type="checkbox" id="remember" name="rememberusername">
+	            		사용자이름 기억 
+	            	</label>
+	        	</div>
+	        		        	<div class="main_login_find_idpw_sso"> <a href="http://kutis.kyonggi.ac.kr/webkutis/index.jsp" target="_blank">아이디 / 비밀번호 찾기</a> </div>
+	        	<div class="main_login_find_idpw">
+	        	</div>
+	        	<div class="main_login_find_idpw">	          	
+					<a href="https://lms.kyonggi.ac.kr/login/register_agree.php">일반인 회원가입</a>
+				</div>
+		        <div class="main_login_find_idpw public">	          	
+					<a href="https://lms.kyonggi.ac.kr/login/forgot_password.php">일반인 아이디/비밀번호 찾기</a>
+				</div>
+	        	    		</form>
+  		</div>
+  
+  		<!-- //main_login_box --> 
+  
+  		<!-- main_login_bottom -->
+  		<div class="main_login_bottom">
+    		<div class="main_login_lang dropdown langdropdown"><a href="#" id="user-language" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nobtn dropdown-toggle">한국어 ‎<span class="caret"></span></a><ul class="dropdown-menu" role="menu" aria-labelledby="user-language"><li><a href="https://lms.kyonggi.ac.kr/login.php?lang=en" title="English ‎(en)‎">English ‎(en)‎</a><span class="natinal_flag"><img src="https://lms.kyonggi.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1693408461/flag/en" alt="en"></span></li><li><a href="https://lms.kyonggi.ac.kr/login.php?lang=ko" title="한국어 ‎(ko)‎">한국어 ‎(ko)‎</a><span class="natinal_flag"><img src="https://lms.kyonggi.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1693408461/flag/ko" alt="ko"></span></li><li><a href="https://lms.kyonggi.ac.kr/login.php?lang=zh_cn" title="简体中文 ‎(zh_cn)‎">简体中文 ‎(zh_cn)‎</a><span class="natinal_flag"><img src="https://lms.kyonggi.ac.kr/theme/image.php/coursemosv2/theme_coursemosv2/1693408461/flag/zh_cn" alt="zh_cn"></span></li></ul></div>    
+    		<!-- SNS -->
+		    <div class="main_login_sns"> 
+		    	<a href="https://www.facebook.com/kyonggiuniv1/" target="_blank" class="main_login_fb">facebook</a>
+		    	<!--<a href="#" target="_blank" class="main_login_twit">twitter</a>-->
+		    </div>
+		    <div class="main_login_line">
+		      	<div class="line"></div>
+		    </div>
+		    <div class="main_login_privacy"> 
+		    	<a href="http://www.kyonggi.ac.kr/webService.kgu?menuCode=K00M05020000" target="_blank">개인정보처리방침</a>
+		    </div>
+    
+		    <!-- main_login_copy -->
+		    <div class="main_login_copy">
+		        (16227) 경기도 수원시 영통구 광교산로 154-42<br>031-249-9114<p class="login_copyright">COPYRIGHT KYONGGI UNIVERSITY. ALL RIGHTS RESERVED.</p>		    </div>
+		    <!-- //main_login_copy --> 
+    
+ 		</div>
+  		<!-- //main_login_bottom --> 
+  
+		</div>
+		
+		</div>
+		<div class ="content">
+		
+		</div>
+	</div>
+	
+	
+
+</body>
+</html>

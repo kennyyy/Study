@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 부트스트랩 css -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- 제이쿼리 -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <!-- 부트스트랩 js -->
+  <script src="./js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="./css/custom-reset.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="stylesheet" href="./css/index04.css">
+  <script>
+    // 슬라이드 영역의 인터벌
+    $(document).ready(function () {
+      $("#myCarousel").carousel({ interval: 500 });
+    })
+  </script>
+</head>
+
+<body>
+
+  <header id="header">
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- 로고 -->
+          <a class="navbar-brand" href="#"><img src="./images/logo.svg" alt="" width="30"></a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+          <!-- 중단메뉴 -->
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1-1</a></li>
+                <li><a href="#">Page 1-2</a></li>
+                <li><a href="#">Page 1-3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+
+          </ul>
+
+
+          <!-- 오른쪽 메뉴 -->
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">로그인
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+
+          </ul>
+
+
+          <form class="navbar-form navbar-right" action="/action_page.php">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+
+
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section style="margin-top: 50px;">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-xs-10 join-style">
+
+          <div class="form-group">
+            <label for="usr">아이디</label>
+            <input type="text" class="form-control" id="usr">
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">비밀번호</label>
+            <input type="password" class="form-control" id="pwd">
+          </div>
+
+          <div class="form-group">
+            <label for="address">주소</label>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="주소를 입력하세요" id="address">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  주소찾기
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 라디오그룹 -->
+          <div class="form-group">
+            <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
+          </div>
+
+          <!-- 일반버튼 -->
+          <button type="button" class="btn btn-default">Default</button>
+          <button type="button" class="btn btn-primary">Default</button>
+
+          <!-- 전체버튼 -->
+          <button type="button" class="btn btn-default btn-block">Default</button>
+          <button type="button" class="btn btn-primary btn-block">Primary</button>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="section1">
+    <div class="container">
+      <h1>상세보기</h1>
+      <div class="row">
+
+
+        <div class="col-md-6 col-xs-12 reset-mp">
+          <div class="left-box">
+            <img src="./images/detail.jpg" width="100%" alt="상품이미지">
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xs-12 reset-mp">
+          <div class="right-box">
+            <div class="content-top">
+              <p>[게릴라특가] 30일체험가능! 벨라페이스 3컬러 LED마스크 눈마사지 겸용/4단계 시간조절/피부홈케어 +사은품까지!</p>
+              <p>135,000원</p>
+              <p>무료배송</p>
+              <p>상품별배송 ㅣ 택배배송 ㅣ당일출고, 12시 이전 결제 건까지 해당 (주말, 공휴일 제외)</p>
+            </div>
+            <div class="content-bot">
+              <span class="left">총 상품금액</span>
+              <span class="right">0 원</span>
+              <div class="content-btn">
+                <span>장바구니</span>
+                <span>구매하기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="section2">
+
+    <div class="container">
+ 
+      <div class="row">
+
+        <div class="wrap">
+
+          <img src="./images/profile.png" width="60px" alt="">
+          
+          <div class="box-wrap">
+              <textarea name="" id="" cols="30" rows="10">
+
+              </textarea>
+              <div class="box-bot">
+                  <div class="left">
+                    <input type="text" name="" id="" placeholder="이름">
+                    <input type="password" name="" id="" placeholder="비밀번호">
+                  </div>
+                  <button class="right">등록하기</button>
+              </div>
+          </div>
+        </div>
+
+
+
+        <ul class="nav nav-tabs mytab">
+          <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+          <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+          <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+          <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+        </ul>
+        
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <p>Some content.</p>
+          </div>
+          <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Some content in menu 1.</p>
+          </div>
+          <div id="menu2" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Some content in menu 2.</p>
+          </div>
+          <div id="menu3" class="tab-pane fade">
+            <h3>Menu 3</h3>
+            <p>Some content in menu 3.</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </section>
+
+  
+
+
+
+
+
+</body>
+
+</html>

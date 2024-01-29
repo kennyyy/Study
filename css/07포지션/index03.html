@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul, li{list-style: none;}
+
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: auto;
+            z-index: 5;
+        }
+        .logo {
+           text-align: center;
+           background: #000;
+           position: relative;
+        }
+
+        .nav .gnb{
+            background-color: black;
+            text-align: center;
+        }
+
+        .nav .gnb li{
+            display: inline-block;
+        }
+        .nav .gnb li a{
+            display: inline-block;
+            padding: 10px 20px;
+            color: wheat;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        section{
+            height: 1500px;
+            margin-top: 200px;
+            position: relative;
+
+        }
+        .floating-btn{
+            background: red;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <!-- 동일 포지션이 설정되어서 겹칠경우 더 밑에 있는 태그가 더 높은 우선순위(z축)를 받는다
+        이러한 z축의 순서를 변경할때에는 z-index 속성을 사용한다.
+        큰값일수록 더 위로 올라온다.
+    -->
+    
+
+    <header>
+       
+        <div class="logo">
+            <img src="./img/css3.png" alt="로고" width="150">
+          
+        </div>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section>
+        <h3>,,,,,,,,,,,,,,,,,,,,,</h3>
+        <h3>,,,,,,,,,,,,,,,,,,,,,</h3>
+        <h3>,,,,,,,,,,,,,,,,,,,,,</h3>
+        <h3>,,,,,,,,,,,,,,,,,,,,,</h3>
+        <div class="floating-btn">
+            응.........
+        </div>
+    </section>
+    
+</body>
+</html>

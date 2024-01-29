@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            border: 1px solid #777;
+
+            /* min - W, H : 300px 이하로는 줄지 않습니다. 300이상부터는 가변됩니다.*/
+            /*
+            min-width: 300px;
+            min-height: 300px; 
+            */
+
+             /* max - W, H : 300 이상으로 커지지 않습니다. 300이하에서는 가변됩니다.*/
+            max-width: 300px;
+            max-height: 300px;
+          
+        }
+
+        .box-content{
+            border: 1px solid #777;
+            width: 300px;
+            padding: 0px 20px;
+
+            
+            /* box-sizing: content-box; 기본값임, 박스너비 계산식 = 너비(300) + 패딩(40) + 윤곽(2) = 342px  */
+           
+            /* border-box */
+            /* 패팅 + 윤곽을 너비에 포함시킴, 박스 너비 계산식 = 너비 (너비+ 패딩 + 윤곽 = 300px ) */
+            box-sizing: border-box;  
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <p>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>안녕하세요<br>
+        안녕하세요<br>안녕하세요<br>
+        안녕하세요<br>안녕하세요<br>
+        안녕하세요<br>
+        안녕하세요<br>
+    </p>
+
+    <div class="box-content">
+        박스너비 = 너비 + 패딩 + 윤곽 <br>
+        상자크기가 변합니다.
+    </div>
+
+</body>
+</html>

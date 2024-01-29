@@ -1,0 +1,13 @@
+package quiz16;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Marine marine = new Marine(0,0);
+		marine.location();
+		marine.move(10, 10);
+		marine.stop();
+
+	}
+
+}

@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ include file = "../include/header.jsp" %>
+<% /* response.setHeader("Refresh", "5"); */
+	request.setAttribute("userid", "USER6");
+%>    
+<h3>여기는 대기방 입니다.</h3>
+if (세션이 있고 and iswin이 Y일경우) 버튼이 보이게 할 예정 <br>
+나는 지금 user6이라고 가정하자
+<hr>
+
+
+<br>
+<c:forEach var="i" items="${iswinList }">
+	<h3>${i.userid }님이 당첨되셨습니다. 어서 자리를 선택해주세요.</h3>
+	<c:if test="${userid == i.userid}">
+		<input type="button" value="임시 버튼" class="btn btn-default" onclick="location.href='selectseat.apply?roomnumber=${i.roomnumber}'; ">
+	</c:if>
+</c:forEach>
+
+
+
+<%@ include file = "../include/footer.jsp" %>

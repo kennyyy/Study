@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열의 선언방법
+        var arr1 = [];
+
+        var arr2 = [1, 2, 3];
+        var arr3 = [1, 2, 3 , "가", "나"]; 
+
+        var arr = [1,2,3];
+        console.log(arr, arr1, arr2, arr3);
+
+        //배열의 사용 index
+        arr[0] = 100;
+        console.log(arr);
+        console.log(arr[0]);
+
+
+        //배열의 길이 확인 
+        console.log("길이 :" , arr.length);
+
+        //////////////////////////////////////////////
+        //배열의 두번째 선언방법 Array객체 사용
+
+        var arr4 = new Array(); //빈 배열 생성
+        var arr5 = new Array(10); // 크기가 10인 배열 생성
+        var arr6 = new Array(10,1,2,3,4,5); //초기값 지정
+
+        console.log(arr4 , arr5, arr6); 
+        ////////////////////////////////////////////////
+        //배열의 다양한 함수
+        //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
+        var arr = new Array();
+        arr.push(1); //끝에 추가
+        arr.push(2);
+        arr.push(3);
+
+        console.log(arr);
+        
+        var x = arr.pop() //마지막요소를 반환하고 삭제
+        console.log(x);
+        console.log(arr);
+
+        arr.unshift(1,2,3);//앞에 추가
+        console.log(arr);
+
+        var x = arr.shift(); //앞에서 제거
+        console.log(arr);
+
+        //splice - 중간에 제거
+        arr.splice(3, 0, 200); //3번째 인덱스, 0개 삭제, 100을 삽입
+        console.log(arr);
+
+        //indexOf
+        //-1이 반환되면 찾는값이 없음.
+        var x = arr.indexOf(200);
+        console.log(x, '번째 인덱스에 200이 있습니다.');
+
+        var x = arr.indexOf(2,3)//숫자 2를 찾는데 3번째 인덱스부터 찾음
+        console.log(x);
+
+        //배열 합치기 concat
+        var x = arr.concat([100,200,300]);
+        var x = arr.concat(1,2,3);
+        console.log(x);
+
+        //정렬
+        arr.sort();//사전순
+        console.log(arr);
+        //filter, foreach, join, map 등등 자주사용됨
+
+    </script>
+</body>
+</html>

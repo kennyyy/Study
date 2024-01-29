@@ -1,0 +1,26 @@
+package static_.buildPattern;
+
+public class BuildTest {
+
+	public static void main(String[] args) {
+		//°´Ã¼ÀÇ »ç¿ë
+		PersonBuild p1 = PersonBuild.builder().setAge(20).build();
+		System.out.println(p1.toString());
+		
+		//°´Ã¼ÀÇ »ç¿ë
+		PersonBuild p2 = PersonBuild.builder()
+									.setAge(30)
+									.setName("È«±æµ¿")
+									.build();
+		System.out.println(p2.toString());
+		
+		//°ªÀ¸º¯°æ
+		p2.setAge(50).setName("È«±æÀÚ");
+		System.out.println(p2.toString());
+		
+		
+		
+		
+		
+	}
+}

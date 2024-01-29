@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /*   * {color: red;} : 여백을 없애고, 기본 스타일을 없애는 용도로 씀   */
+        b, i {color:red;}       /* , 를 활용해서 여러개 한번에 적용시킬 수 있음 */
+        .a {color: green;}      /* 클래스 */
+        #a {color: pink;}       /* 아이디 */
+        /* 클래스가 a인 태그랑 아이디가 a인 태그를 동시 디자인 하려면? ,를 활용 */
+        .a, #a, .b {font-weight: bold;} /* .a클래스와 #a아이디와 .b 클래스를 동시에 디자인 */
+    </style>
+
+</head>
+<body>
+    
+    <b>태그선택자</b><br>
+    <br><b>태그선택자</b><br>
+
+    <br><i>태그선택자</i><br>
+
+    <br><section id="a">아이디선택자</section>
+
+    <p class="a">클래스선택자</p>
+    <p class="b">클래스선택자</p>
+
+    <strong class="a">클래스선택자</strong>
+
+</body>
+</html>

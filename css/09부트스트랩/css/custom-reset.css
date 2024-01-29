@@ -1,0 +1,43 @@
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, li, ol, dd, dl {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+html, body {
+    /* 웹폰트 */
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    min-width: 320px;
+}
+
+
+
+input[type=checkbox], input[type=radio] {
+    -webkit-appearance: none; /* 구글, 사파리 */
+    -moz-appearance: none;  /* 파이어폭스 */
+    appearance: none; /* 나머지 의 기본디자인을 지운다 */
+
+    width: 20px;
+    height: 20px;
+    border: 1px solid #3498db;
+    cursor: pointer;
+}
+
+
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+    outline: none;
+    background-color: #3498db;
+}
+
+

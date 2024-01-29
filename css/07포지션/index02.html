@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .wrap{
+            width: 500px;
+            margin: 0 atuo;
+        }
+        .box{
+            height: 100px;
+            border: 1px solid black;
+
+        }
+        .mybox{
+            
+            background-color: purple;
+            /* 내 위치를 기준으로 z축을 끌어올림 */
+            position: relative;
+            left: 300px;
+            top: 300px;
+      
+
+        }
+        .test{
+            width: 500px;
+            height: 500px;
+            margin: 0 atuo;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+        <div class="wrap">
+            <div class="box">박스1</div>
+            <div class="box mybox">
+                내박스
+                    
+            </div>
+            <div class="box">박스1</div>
+            <div class="box">박스1</div>
+            <div class="box">박스2</div>
+            <div class="box">박스3</div>
+
+        </div>
+
+      
+</body>
+</html>

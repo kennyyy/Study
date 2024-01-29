@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file = "../include/header.jsp" %>
+<% response.setHeader("Refresh", "5"); %>    
+<h3>여기는 대기방 입니다.</h3>
+
+
+<div>
+	결과 뜨는곳
+	ex)00님 당첨!
+</div>
+<br><hr><br>
+${iswinList }
+<c:forEach var="i" items="${iswinList }">
+	<h3>${i.userid }</h3>
+</c:forEach>
+
+if 자리 당첨시 버튼이 보임
+<input type="button" value="임시 버튼" class="btn btn-default" onclick="location.href='./apply_selectSeat.jsp'; ">
+
+<%@ include file = "../include/footer.jsp" %>

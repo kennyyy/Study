@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ////////////////////////////////////////
+        //익명함수
+        //익명함수는 변수 선언 이후에 호출해야 합니다.
+        //a(); X
+        var a = function(){
+            console.log("hello world");
+        }
+
+        a();
+
+        var b = function(x,y){
+            return x+y;
+        }
+
+        var result = b(2,1);
+        console.log(result);
+
+
+
+        //////////////////////////////////////////////////////////////
+
+        var func1 = function(name, score1, score2, score3){
+            return name + "님의 평균 : " + (score1+score2+score3)/3;
+        }
+
+        var func2 = function(num){
+            if(num%2==0){
+                return "짝수";
+            }else{
+                return "홀수";
+            }
+        }
+
+
+        var func3 = function(num){
+            var sum = 0;
+            for(var i = 1; i<=num; i++){
+                sum+=i;
+            }
+            return sum;
+        }
+
+        var func4 = function(a, b){
+            var c = [];
+            return c.concat(a,b);
+        }
+
+        console.log(func1("홍길동",22,25,35));
+        console.log(func2(10));
+        console.log(func3(20));
+        console.log(func4([1,2,3], [4,5,6,7,8]));
+    
+        console.log(func4("1","2"));
+        console.log([1,2,3,4]);
+    </script>
+</body>
+</html>

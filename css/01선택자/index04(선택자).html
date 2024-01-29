@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 선택자 스페이스 : 자손 선택 
+        .abox p {color: red;} */
+    
+        /* 선택자 > : 바로 밑에 직계 자손 */
+        .abox > p  { color: red; }
+        .abox > ul p{ color: blue;}
+    </style>
+
+
+</head>
+
+    
+
+<body>
+    <div class="abox">
+        <p>하위선택자</p>
+        <p>하위선택자</p>
+
+        <ul>
+            <li><p>하위선택자</p></li>
+            <li><p>하위선택자</p></li>
+        </ul>
+
+        <p>하위선택자</p>
+    </div>
+
+    <p>여기는?</p>
+
+    <hr>
+
+    <style>
+       .bbox input[type="password"]{ border-radius: 15px;}
+       .bbox input[name= "aaa"] {background-color: green;} 
+    </style>
+
+    <div class="bbox">
+        아이디 : <input type="text" name="aaa">
+        이름 : <input type="text" name="bbb">
+        비밀번호 : <input type="password" name="ccc">
+    </div>
+
+    <style>
+        li[class*="item"]{color: aqua;}
+        ul > li:nth-child(4){color: aquamarine}
+    </style>
+
+    <div>
+        <ul><li class="item-1">아이템</li></ul>
+        <ul><li class="item-2">아이템</li></ul>
+        <ul><li class="item-3">아이템</li></ul>
+        <ul><li class="item-4">아이템</li></ul>
+        <ul><li class="item-5">아이템</li></ul>
+
+        <ul>
+            <li class="item-6">아이템</li>
+            <li class="item-6">아이템</li>
+            <li class="item-6">아이템</li>
+            <li class="item-6">아이템</li>
+        </ul>
+    </div>
+
+    <hr>
+    <style>
+        /*
+         액티브 : 마우스를 눌렀을때
+         호버 : 마우스를 올렸을때
+         */
+        .cbox .a:active{ background-color: blue; color: aqua; cursor: pointer;}
+        .cbox .b:hover{ background: #000; color: white;}
+
+        .cbox input:focus{border: 1px solid yellow; outline: none;}
+    </style>
+    <div class="cbox">
+        <div class="a">엑티브</div>
+
+        <div class="b">호버</div>
+
+        포커스 : <input type="text" name="aaa">
+    </div>
+
+</body>
+</html>

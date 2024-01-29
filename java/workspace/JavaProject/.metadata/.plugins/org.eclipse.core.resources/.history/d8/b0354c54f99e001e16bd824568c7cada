@@ -1,0 +1,86 @@
+package com.jdbc.example;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
+
+public class SelectEx {
+
+	public static void main(String[] args) {
+		
+
+	}
+	//select할 내용작성
+	public static void selectOne() {
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String uid = "hr";
+		String upw = "hr";
+		
+		String sql= "SELECT * FROM EMPLOYEES WHERE EMPLOYEE_ID >= ?";
+		
+		
+		
+		
+		//모든 jdbc코드는 try~catch구문에서 작성이 들어가야 합니다. (throws를 던지고 있기 때문에)
+		//1. JDBC드라이버 준비
+		
+		try {
+			//1. JDBC 드라이버 준비
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			
+			//2. conn객체 생성
+			
+			Connection conn = DriverManager.getConnection(url, uid, upw);
+			
+			//3. conn으로부터 statement 객체 생성 - sql상태를 지정하기 위한 객체
+			
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			
+			//?에 개수에 맞추어 값을 채웁니다. 
+			//setString(순서 , 문자열)
+			//setInt(순서 , 숫자)
+			//setDouble(순서 , 실수)
+			pstmt.setString(1 , "120");
+			
+			//4. 실행 
+			//executeQuery - select문에 사용합니다.
+			//executeUpdate - insert, update, delete문에 사용합니다.
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			
+			while(rs.next()) { // next() 현재 값이 있으면 true, 없으면 false (row단위로 이동)
+				//rs.getString(컬럼명) - 문자열 반환
+				//rs.getInt(컬럼명) - 정수형 반환
+				//rs.getDouble(컬럼명) - 실수형 반환
+				//rs.getDate(컬럼명) - 날자형 반환
+				int emp_id = rs.getInt("EMPLOYEE_ID");
+				String first_name = rs.getString("FIRST_NAME");
+				String phone_number = rs.getString("phone_number");
+				//String hire_date = rs.getString("hire_date");
+				Timestamp hire_date = rs.getTimestamp("hire_date");
+				int salary = rs.getInt("salary");
+				
+				System.out.println("아이디 : " + emp_id);
+				System.out.println("이름 : " + first_name);
+				System.out.println("전화번호 : " + phone_number);
+				System.out.println("입사일 : " + hire_date);
+				System.out.println("급여 : " + salary);
+				
+			}
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			
+		}
+	}
+
+}

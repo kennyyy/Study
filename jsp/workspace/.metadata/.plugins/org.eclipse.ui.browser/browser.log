@@ -1,0 +1,14 @@
+
+1월 02, 2024 10:15:10.61 NEW SESSION
+1월 02, 2024 10:15:10.63 [13604:20740:0102/101510.617:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+1월 02, 2024 11:33:35.89 [13604:20740:0102/113335.897:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 02, 2024 11:47:47.67 [13604:20740:0102/114747.669:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+
+1월 08, 2024 11:08:48.33 NEW SESSION
+1월 08, 2024 11:08:48.35 [10772:5820:0108/110848.321:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 08, 2024 14:44:46.92 [10772:9856:0108/144446.921:ERROR:cert_verify_proc_builtin.cc(705)] CertVerifyProcBuiltin for kgunews.com failed:
+1월 08, 2024 14:44:46.92 ----- Certificate i=0 (CN=www.issuegate.com) -----
+1월 08, 2024 14:44:46.92 ERROR: Time is after notAfter
+1월 08, 2024 14:44:46.92 
+1월 08, 2024 14:44:46.92 
+1월 08, 2024 17:31:39.42 [10772:5820:0108/173139.425:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost

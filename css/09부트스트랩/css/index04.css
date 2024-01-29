@@ -1,0 +1,67 @@
+/* 부트스트랩에서 box를 하나만 사용해서 가운데 정렬하려면, float 해제하면 됩니다 */
+.join-style {
+    margin: 0 auto;
+    float: none;
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.reset-mp{ padding: 0;}
+#section1 .left-box { padding: 20px;}
+#section1 .left-box img:hover{opacity: 0.7; cursor: pointer;}
+#section1 .right-box {padding: 20px; width: 100%;}
+
+#section1 .right-box .content-top{min-height: 405px;}
+#section1 .right-box .content-top p:nth-child(1){ padding-bottom: 10px; font-size: 30px; color: #888888;}
+#section1 .right-box .content-top p:nth-child(2){border-top: 1px solid #999999; border-bottom: 1px solid #999999;  padding: 15px 0; font-size: 40px; font-weight: 900;}
+#section1 .right-box .content-top p:nth-child(3){ 
+    padding-top: 10px; font-size: 17px; color: #999999; margin: 0;
+}
+#section1 .right-box .content-top p:nth-child(4)
+ {font-size: 17px; color: #999999; margin: 0;}
+
+#section1 .right-box .content-bot {overflow: hidden;}
+
+#section1 .right-box .content-bot .left{ float: left; font-size: 20px; padding: 20px 0; color: #999999;}
+#section1 .right-box .content-bot .right{ float: right; font-size: 42px; font-weight: bold;}
+
+#section1 .right-box .content-bot .content-btn{clear: both; width: 100%; text-align: center; overflow: hidden;  box-sizing: border-box; border: 1px solid #eeeeee;  }
+
+
+#section1 .right-box .content-bot .content-btn span{display: inline-block; float: left; width: 50%;  box-sizing: border-box; padding: 20px 0; font-size: 20px; color: #999999;}
+
+#section1 .right-box .content-bot .content-btn span:nth-last-child(1){
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: white;
+}
+
+#section2 .container {margin-top: 80px; border-top: 1px solid #999999;}
+
+#section2 .wrap { padding: 30px; position: relative;}
+#section2 .wrap img{ position: absolute; top: 30px; left: 30px;}
+
+#section2 .wrap .box-wrap{ padding-left: 100px;}
+#section2 .wrap .box-wrap textarea {width: 100%; height: 100px;}
+
+#section2 .wrap .box-wrap .box-bot{overflow: hidden;}
+#section2 .wrap .box-wrap .box-bot .left{float: left; }
+#section2 .wrap .box-wrap .box-bot .left input{ display: block; margin: 5px 0; padding: 5px 10px;}
+#section2 .wrap .box-wrap .box-bot .right{float: right;}
+#section2 .wrap .box-wrap .box-bot button {display: inline-block; padding: 10px 15px; margin: 5px 0; background-color: #2e6da4; color: white; border: none;}
+
+
+
+
+.mytab > li{
+    width: 25%;
+    text-align: center;
+}
+.mytab > li > a {
+    color: #000;
+    border: 1px solid #e3e3e3;
+    margin: 0;
+    border-radius: 0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    color: red;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+        1. 플렉스는 부모영역인 container, 배치되는 요소인 item으로 구분됩니다.
+        2. 각각 요소들에 사용할 수 있는 속성들이 있습니다.
+        */
+        .box {
+            background-color: yellow;
+        }
+        .box .item {
+            background-color: green;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+ 
+        }
+
+
+        .container {
+            /* flex 부모박스가 블럭모형, inline-flex 인라인배치 */
+            /* display: flex; */
+            display: inline-flex;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container box">
+        <div class="item">hello</div>
+        <div class="item">안녕하세요</div>
+        <div class="item">flex</div>
+    </div>
+
+    <div class="container box">
+        <div class="item">hello</div>
+        <div class="item">안녕하세요</div>
+        <div class="item">flex</div>
+    </div>
+
+    <hr/>
+
+    <style>
+        .container2 {
+            /* height: 500px; */
+            display: flex;
+            /* 
+                플렉의 main-axis
+                주축이 row가 되면, 반대축을 colume이 됩니다.
+                주축이 column이 되면 반대축은 row가 됩니다.
+            */
+            flex-direction: column;           
+        }
+    </style>
+
+
+    <div class="container2 box">
+        <div class="item">hello</div>
+        <div class="item">안녕하세요</div>
+        <div class="item">flex</div>
+    </div>
+
+    <hr/>
+
+    <style>
+        .container3 {
+            width: 300px;
+            display: flex;
+            /* flex-direction: row; */
+            
+            /* item을 한줄로 나타낼때, nowrap, item을 여러줄로 나타낼때 wrap */
+            /* flex-wrap: wrap; */
+
+            /* direction과, wrap을 한번에 표현하는 속성 */
+            flex-flow: row wrap;
+
+        }
+    </style>
+
+    <div class="container3 box">
+        <div class="item">hello</div>
+        <div class="item">안녕하세요</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+    </div>
+
+
+
+    <hr>
+
+
+    <style>
+        .container4 {
+            display: flex;
+            /* 
+            height: 1000px;
+            flex-direction: column; 
+            */
+
+            /* justify-content = 주축정렬(즉, direction에 따라서 정렬방향이 바뀝니다) */
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            justify-content: center;
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+        }
+    </style>
+
+    <div class="container4 box">
+        <div class="item">hello</div>
+        <div class="item">안녕하세요</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+
+    </div>
+
+    <hr>
+
+    <style>
+        .container5 .item {height: auto;}
+        .container5 {
+            width: 600px;
+            height: 300px;
+            display: flex;
+            flex-wrap: nowrap;
+
+            /* 반대축에 한줄에 대한 정렬 align-items */
+            /* align-items: stretch; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* align-items: baseline; */
+        }
+
+    </style>
+
+
+    <div class="container5 box">
+        <div class="item">hello</div>
+        <div class="item">안녕하세요</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+
+    </div>
+
+    <hr/>
+
+    <style>
+        .container6 .item {height: auto; }
+        .container6 {
+            width: 50%;
+            height: 300px;
+            
+            display: flex;
+            flex-wrap: wrap;
+            /* 반대축의 여러줄에 대한 정렬 */
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            /* align-content: center; */
+            /* align-content: space-between; */
+            align-content: space-around;
+
+        }
+    </style>
+
+    <div class="container6 box">
+        <div class="item">hello</div>
+        <div class="item">안녕하세요</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+
+    </div>
+
+
+    <hr/>
+
+
+    <style>
+        .container7 {
+            width: 100%;
+            height: 500px;
+            background-color: yellow;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            width: 20%;
+            height: 20%;
+            background-color: green;
+        }
+    </style>
+
+    <div class="container7">
+        <div class="item">
+            상자
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

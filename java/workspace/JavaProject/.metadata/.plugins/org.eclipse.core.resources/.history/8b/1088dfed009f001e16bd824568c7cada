@@ -1,0 +1,11 @@
+package com.jdbc.example;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Model model = new Model();
+		model.selectOne();
+
+	}
+
+}

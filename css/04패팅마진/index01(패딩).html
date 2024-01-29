@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(./img/bg_grid.jpg);
+        }
+
+
+        .abox{
+            /* border: 1px solid #777; */
+            border-top: 1px solid #777;
+            border-right: 1px solid #777;
+            border-bottom: 1px solid #777;
+            border-left: 1px solid #777;
+            /* border-radius: 100px; */
+            
+            background-color: aqua;
+            width: 500px;
+            height: 100px;
+
+
+            /* padding: 20px; 4방향 */
+            /* padding: 20px 0; 상하, 좌우 */
+            /* padding: 20px 0px 10px; 상, 좌우, 하 */
+            /* 위, 오른쪽, 아래, 왼쪽 (시계 방향)*/
+            padding: 10px 20px 30px 40px;
+
+            /* 
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+            padding-left: 50px; */
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="abox">
+        박스 너비 = 박스너비(500px) + 패딩(padding - left, right 40, 20) + 윤곽(border - left, right = 1, 1px)
+        박스 높이 = 박스높이(100px) + 패딩(padding - top, bottom 10, 30) + 윤곽(border - top, bottom = 1, 1px)
+        (패딩은 겹쳐지지 않는다 : 패딩은 서로 겹쳐지지않고 서로 자기 패딩값을 적용되어 나타난다.)
+    </p>
+</body>
+</html>

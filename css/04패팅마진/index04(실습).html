@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li, ol, dd, dl{ list-style: none;}
+        img{max-width: 100%; height: auto;}
+
+        .menu-container{
+            text-align: center;
+            background: #000;
+        }
+
+        .menu-list li{
+            display: inline-block;
+        }
+  
+        .menu-list li a{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+        .menu-list li a:hover{
+            border-bottom: 5px solid white;
+        }
+
+        article img{
+            display: block;  
+        }
+
+        .section-container{
+            width: 800px;
+            margin: 50px auto;
+        }
+        .section-content{
+            border: 1px solid #000;
+            padding: 30px;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <article>
+        <img src="./img/C1_PC1.jpg" alt="이미지">
+    </article>
+    
+    <section>
+        <div class="section-container">
+            <h2>오늘의 발견</h2>
+            <div class="section-content">
+                <p>본문내용...</p>
+                <p>본문내용...</p>
+                <p>본문내용...</p>
+                <p>본문내용...</p>
+                <p>본문내용...</p>
+                <p>본문내용...</p>
+                <p>본문내용...</p>
+                <p>본문내용...</p>
+            </div>
+        </div>
+    </section>
+  
+</body>
+</html>

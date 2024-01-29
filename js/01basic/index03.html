@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // === , !== 는 타입도 비교하는 연산자 이다
+        var num1 = "10";
+        var num2 = 10;
+
+        console.log(num1 == num2); //두개짜리 = 값만 비교
+        console.log(num1 === num2);// 값과 타입을 동시비교
+
+        console.log(num1 != num2);
+        console.log(num1 !== num2);
+
+
+        var a;
+        var b = null;
+        console.log(typeof a, typeof b);
+        console.log(a, b, a == b); //t , 둘다 값은 안들어있다
+        console.log(a, b, a === b);//f 
+
+        var c = false;
+        var d = "";//공백은 false로 인식
+
+        console.log(c == d); // t
+        console.log(c === d);// f
+
+    </script>
+    
+</body>
+</html>

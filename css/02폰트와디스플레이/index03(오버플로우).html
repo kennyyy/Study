@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abox{
+            border: 1px solid #777;
+            
+            /* 원래 높이는, 나중에는 컨텐츠가 자연스럽게 채워서 내려오도록 
+            가만히 두는것이다. */
+            height: 100px; 
+            width: 300px;
+            /* overflow: visible; */
+            /* overflow: scroll; */
+            /* overflow: hidden; */
+            
+            /* 글이 넘치지 않으면 그대로 보이고 글씨가 넘치면 scroll로 설정 */
+            overflow: auto;
+        }
+
+        .bbox{
+            border: 1px solid #777;
+            height: 100px; 
+            width: 300px;
+
+            overflow-x: scroll;
+            overflow-y: scroll;
+            /*nowrap : 줄바꿈 x*/
+            white-space: nowrap; 
+        }
+
+        .cbox{
+            border: 1px solid #777;
+            height: 100px; 
+            width: 300px;
+
+            overflow: scroll;
+            white-space: nowrap; 
+        }
+        .cbox table {
+            border-collapse: collapse;
+        }
+
+        .cbox table, .cbox tr, .cbox td {
+            border: 1px solid #777;
+        }
+ 
+    </style>
+
+</head>
+<body>
+    <p class="abox">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ullam sequi quam architecto fugit aliquid. Dolore odio maiores corporis vero aut cum cupiditate alias exercitationem minima? Sapiente totam quam quidem?</p>
+
+
+    <div class="bbox">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, illo </p>
+            <p>libero quae deleniti officiis soluta </p>
+            <p>suscipit! Illo quas necessitatibus, repellat unde odio quisquam debitis ipsa, nulla iure consequatur, quaerat eos?</p>
+    </div>
+    <div class="cbox">
+        <h3 >제목</h3>
+
+        <table>
+            <tr>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+            </tr>
+            <tr>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+            </tr>
+            <tr>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+            </tr>
+            <tr>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+                <td>제목</td>
+            </tr>
+        </table>
+    </div>
+   
+</body>
+</html>

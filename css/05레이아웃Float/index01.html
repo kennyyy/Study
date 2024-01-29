@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .abox{
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid #777;
+            /* 부모요소에 - 2nd */
+            overflow: hidden;
+            
+        }
+
+        /* 자식에 float을 적용하면 부모영역이 자식을 감싸지 못하는 문제가 생깁니다. */
+        /* float을 적용시키면 부모의 높이값이 지정이 안되는 현상때문에 문제가 발생한다. */
+        
+        /* 부모요소에 - 1st */
+        /* .abox:after{
+            content: "";
+            display: block;
+            clear: both;
+            
+        } */
+
+        .abox .item{
+            border: 1px solid #777;
+            float: left;
+            width: 25%;
+            box-sizing: border-box;
+        }
+
+        .bbox{
+            border: 1px solid #777;
+            margin: 0 auto;
+            width: 500px;
+
+            overflow: hidden;
+        }
+        .bbox .right{
+            float: right;
+        }
+        .bbox .left{
+            float: left;
+        }
+       
+        .bbox .left2{float: left;}
+    </style>
+</head>
+<body>
+
+    <div class="abox">
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+    </div>
+
+    <div class="bbox">
+        <div class="left">왼쪽</div>
+        <div class="right">오른쪽</div>
+        <div class="left2">왼쪽</div>
+
+        <div style="clear: both;">하나 넣었음</div>
+    </div>
+    
+
+    <style>
+        *{ 
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            overflow: hidden;
+            background-color: black;   
+            width: 500px;
+            margin: 0 auto;  
+        }
+        li{
+            float: left;
+            width: 20%;
+            text-align: center;
+            line-height: 100px;
+            height: 100px;
+        }
+        li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            box-sizing: border-box;
+            border-bottom: 10px solid black;
+
+            
+        }
+        a:hover{
+            border-bottom: 10px solid wheat;
+        }
+    </style>
+
+    <hr>
+
+    <ul>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+    </ul>
+</body>
+</html>

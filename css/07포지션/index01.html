@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 500px;
+            border: 1px solid #777;
+            margin: 0 auto;
+        }
+        p{
+            border: 1px solid #777;
+            height: 100px;
+            margin: 0;
+        }
+        .content{
+            /* 부모 */
+            position: relative;
+        }
+
+        .inner1{
+           
+           
+            background-color: red;
+        }
+        .inner2{
+            /* 
+                https://developer.mozilla.org/ko/docs/Web/CSS/position
+                position: absolute;
+                부모영역 기반으로 움직임(position: relative;가 있는 부모 기준으로)
+                만약 relative가 없으면 body기준으로 움직임
+            
+                포지션 규칙
+                1. 움직일 대상에 absolute
+                2. 부모에 relative 넣는다
+                3. top bottom 중 1개, left right중 택1 움직임
+                */
+            position: absolute;
+            top: 10px;
+            left: -200px;
+
+            background-color: blue;
+        }
+        .inner3{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <p class="inner1">포지션</p>
+            <p class="inner2">포지션</p>
+            <p class="inner3">포지션</p>
+        </div>
+    </div>
+    
+</body>
+</html>

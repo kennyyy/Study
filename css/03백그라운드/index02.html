@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrap{
+            height: 500px;
+            border: 1px solid #777;
+            background-image: url(./img/pexels-david-besh-884788.jpg);
+            background-repeat: no-repeat;
+
+            /*
+            contain : 무조건 이미지가 잘리지 않도록 하고, 나머지는 비움  
+            cover : 빈공간없이 꽉채우고, 이미지를 자름
+            */
+            /* background-size: cover; */
+           background-size: 100% 500px;
+           
+        }
+        #wrap-mid{
+            height: 500px;
+            border: 1px solid #777;
+
+            background-image: url(./img/pexels-david-besh-884788.jpg);
+            background-size: cover;
+
+            /* attachment 기본값 scroll : 스크롤에 따라 따라서 배경도 같이 이동 */
+            /* fixed : 스크롤에 상관없이 배경이미지는 고정이 되어서 - 마치 움직이는 효과가 난다. */
+            background-attachment: fixed;
+           
+        }
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        ..........................
+    </section>
+
+    <section id="wrap-mid">
+
+    </section>
+
+    <section style="height: 1000px;">
+    
+    </section>
+</body>
+</html>

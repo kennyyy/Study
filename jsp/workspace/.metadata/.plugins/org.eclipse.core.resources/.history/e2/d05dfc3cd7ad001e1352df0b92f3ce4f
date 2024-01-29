@@ -1,0 +1,55 @@
+package com.myweb.board.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import com.myweb.user.model.UserDAO;
+import com.myweb.util.JdbcUtil;
+
+public class BoardDAO {
+	//싱글톤
+	DataSource datasource = null;
+	
+	private static BoardDAO instance = new BoardDAO();
+	
+	private BoardDAO() {
+		try {
+			//드라이버 호출문장
+			//Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			//커넥션 pool
+			//초기설정 값을 얻을 수 있는 객체
+			
+			InitialContext init new InitialContext();
+			datasource = (DataSource)init.lookup("java:comp/env/jdbc/oracle");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static BoardDAO getInstance() {
+		return instance;
+	}
+	///////////////////////////////////////
+	
+	private String url = JdbcUtil.url;
+	private String uid = JdbcUtil.uid;
+	private String upw = JdbcUtil.upw;
+	
+	public void insert(String writer, String title, String content) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}
