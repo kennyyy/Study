@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="btn5">5개추가하기</button>
+    <button type="button" id="btn1">1개추가하기</button>
+
+    <style>
+        /* 테이블 한줄로 만드는 방법 */
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        thead th,
+        td {
+            border: 1px solid black;
+        }
+        input[type="text"]{
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .course thead th:nth-child(1){
+            width: 100px;
+        }
+        .course thead th:nth-child(2),
+        .course thead th:nth-child(4){
+            width: 200px;
+        }
+        .course thead th:nth-child(3){
+            width: 80px;
+        }
+        
+    </style>
+
+    <table class="course">
+        <thead>
+            <tr>
+                <th>교시</th>
+                <th>훈련과목</th>
+                <th>담당자</th>
+                <th>훈련내용</th>
+            </tr>
+       
+        </thead>
+
+        <!-- 내용 -->
+    </table>
+
+    <script>
+        var course = document.querySelector(".course");
+        var btn1 = document.getElementById("btn1");
+        var btn5 = document.getElementById("btn5");
+
+        btn1.onclick = function () {
+            var tr = document.createElement("tr");
+
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            var td4 = document.createElement("td");
+
+            td1.innerHTML = "<input type='text' >"
+            td2.innerHTML = "<input type='text' >"
+            td3.innerHTML = "<input type='text'>"
+            td4.innerHTML = "<input type='text'>"
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            course.appendChild(tr);
+
+        }
+
+        btn5.onclick = function () {
+            for (var i = 1; i <= 5; i++) {
+                var tr = document.createElement("tr");
+
+                var td1 = document.createElement("td");
+                var td2 = document.createElement("td");
+                var td3 = document.createElement("td");
+                var td4 = document.createElement("td");
+
+                td1.innerHTML = "<input type='text'>"
+                td2.innerHTML = "<input type='text'>"
+                td3.innerHTML = "<input type='text'>"
+                td4.innerHTML = "<input type='text'>"
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                course.appendChild(tr);
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

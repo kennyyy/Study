@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body{
+            font-size: 30px;
+        }
+        .list li {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .list li img {
+            width: 100%;
+        }
+
+        .box {
+            width: 500px;
+        }
+
+        .box img {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+    <h1>다중이벤트 처리</h1>
+    <ul class="list">
+        <li><img src="./img/1.jpg" alt=""></li>
+        <li><img src="./img/2.jpg" alt=""></li>
+        <li><img src="./img/3.jpg" alt=""></li>
+        <li><img src="./img/4.jpg" alt=""></li>
+    </ul>
+    <div>
+        결과 :
+        <div class="box">
+            <img src="./img/1.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var list = document.querySelector(".list");
+        var box = document.querySelector(".box");
+
+        var img = document.querySelector(".box img")
+
+        list.onclick = function () {
+
+            if(event.target.tagName !== "IMG"){
+                return;
+            }
+            img.src = event.target.src;
+        }
+    </script>
+</body>
+
+</html>

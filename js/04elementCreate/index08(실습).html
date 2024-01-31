@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        li > span{display: inline-block; width: 200px; white-space: pre-wrap; }
+    </style>
+
+    <div class="nameDiv">
+        <h1>할일 목록 만들기</h1>
+        <input type="text" placeholder="이름을 입력하세요" id="name1">
+        <button type="button" id="btn1">확인</button>
+    </div>
+    <br>
+    <input type="text" placeholder="당신의 할일을 적으세요" class="todo">
+    <button type="button" id="btn2">확인</button>
+    <ul class="list">
+
+    </ul>
+
+
+
+    <button type="button" id="delAllBtn">전체 삭제</button>
+
+    <script>
+        var nameDiv = document.querySelector(".nameDiv");
+        var btn1 = document.getElementById("btn1");
+        var list = document.querySelector(".list");
+        var name = document.querySelector("#name1");
+
+
+        var btn2 = document.getElementById("btn2");
+        var todo = document.querySelector(".todo");
+
+
+        btn1.onclick = function () {
+            name1.style.display = "none";
+            btn1.style.display = "none";
+            var h2 = document.createElement("h2");
+            h2.innerHTML = name1.value + "님 안녕하세요.";
+            nameDiv.appendChild(h2);
+        }
+
+        btn2.onclick = function () {
+
+            var li = document.createElement("li");
+            li.innerHTML = "<span>" + todo.value + "</span>";
+
+            var btnDel = document.createElement("button");
+            btnDel.innerHTML = "X";
+
+            btnDel.onclick = function () {
+                this.parentElement.remove();
+            }
+
+            var btnUp = document.createElement("button");
+            btnUp.innerHTML = "up";
+            btnUp.onclick = function () {
+                var current = this.parentElement;
+                var prev = current.previousElementSibling;
+                console.log(this.parentElement);
+
+                list.insertBefore(current, prev);
+
+
+            }
+
+            var btnDown = document.createElement("button");
+            btnDown.innerHTML = "down";
+            btnDown.onclick = function () {
+                var current = this.parentElement;
+                var next = current.nextElementSibling;
+
+                list.insertBefore(next, current);
+            }
+
+
+            li.appendChild(btnDel);
+            li.appendChild(btnUp);
+            li.appendChild(btnDown);
+            //이 방법도 가능함
+            //li.innerHTML = todo.value + '<button type="button" onclick="hide(this)">X</button> <button onclick="down(this)">↓</button> <button onclick="up(this)">↑</button>';
+            list.appendChild(li);
+            todo.value = "";
+        }
+
+        //button생성 방법) 2
+        // var btn = document.createElement("button");
+        // btn.innerHTML = "X";
+        // btn.addEventListener('click', deleteTodo);
+
+        // function deleteTodo(){
+        //      this.parentElement.remove(); //1st
+        //      event.target.parentElement.remove(); //2st
+        // }
+
+        function hide(target) {
+            target.parentElement.style.display = "none";
+            var p = document.createElement("p");
+            var text = document.createTextNode("숨기기 완료!");
+            p.appendChild(text);
+            list.appendChild(p);
+        }
+        var delAllBtn = document.querySelector("#delAllBtn");
+
+        delAllBtn.onclick = function () {
+            var liLength = list.children.length;
+            if (confirm("삭제되가 되면 복구할 수 없습니다. 정말 삭제하시겠습니까?")) {
+                for (var i = 0; i < liLength; i++) {
+                    list.removeChild(list.children[0]);
+                }
+            }
+
+            //ul
+            //console.log( todoList.children );
+            // var x = todoList.children.length;
+            // for(var i = 0; i < x; i++) {
+            //     todoList.firstElementChild.remove();
+            // }
+            //while(todoList.firstElementChild != null) {
+            //    todoList.firstElementChild.remove();
+            //}
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

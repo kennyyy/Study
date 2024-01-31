@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="nameDiv">
+        <h1>할일 목록 만들기</h1>
+        <input type="text" placeholder="이름을 입력하세요" id="name1">
+        <button type="button" id="btn1">확인</button>
+    </div>
+    <br>
+    <input type="text" placeholder="당신의 할일을 적으세요" class="todo">
+    <button type="button" id="btn2">확인</button>
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        var nameDiv = document.querySelector(".nameDiv");
+        var btn1 = document.getElementById("btn1");
+        var list = document.querySelector(".list");
+        var name = document.querySelector("#name1");
+
+
+        var btn2 = document.getElementById("btn2");
+        var todo = document.querySelector(".todo");
+
+
+        btn1.onclick = function () {
+            name1.style.display = "none";
+            btn1.style.display = "none";
+            var h2 = document.createElement("h2");
+            h2.innerHTML = name1.value + "님 안녕하세요.";
+            nameDiv.appendChild(h2);
+        }
+
+        btn2.onclick = function () {
+            var li = document.createElement("li");
+            li.innerHTML = todo.value + '<button type="button" onclick="hide(this)">X</button>';
+            list.appendChild(li);
+            todo.value = "";
+        }
+
+        //button생성 방법) 2
+        // var btn = document.createElement("button");
+        // btn.innerHTML = "X";
+        // btn.addEventListener('click', deleteTodo);
+
+        // function deleteTodo(){
+        //      this.parentElement.remove(); //1st
+        //      event.target.parentElement.remove(); //2st
+        // }
+
+        function hide(target) {
+            target.parentElement.style.display = "none";
+            var p = document.createElement("p");
+            var text = document.createTextNode("숨기기 완료!");
+            p.appendChild(text);
+            list.appendChild(p);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
