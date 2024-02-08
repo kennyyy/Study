@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-size: 30px;
+        }
+        .list li {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .list li img {
+            width: 100%;
+        }
+
+        .box {
+            width: 500px;
+        }
+
+        .box img {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+    <h4>localStorage를 이용하여 마지막에 클릭한 2개의 정보를 불러오기</h4>
+
+    <ul class="list">
+        <li><img src="./img/1.jpg" alt=""></li>
+        <li><img src="./img/2.jpg" alt=""></li>
+        <li><img src="./img/3.jpg" alt=""></li>
+        <li><img src="./img/4.jpg" alt=""></li>
+    </ul>
+
+    <button id="btn">최신정보확인하기</button>
+
+    <script>
+        var list = document.querySelector(".list");
+        var btn = document.getElementById("btn");
+
+        var imgArr = new Array(); 
+        list.onclick= ()=>{
+            
+            if(event.target.tagName != "IMG") return;
+
+            if(imgArr.length < 2){
+                imgArr.push(event.target.src);
+                console.log(event.target.src);
+            }else{
+                imgArr.shift();
+                imgArr.push(event.target.src);
+                console.log(event.target.src);
+            }
+            console.log(imgArr);
+           localStorage.setItem("imgArr", JSON.stringify(imgArr));
+        }
+
+        btn.onclick= ()=>{
+            location.href="index03(실습결과).html";
+        }
+
+
+         //console.log(localStorage);
+            //저장 - 문자열 밖에 저장을 못함
+            // localStorage.setItem("aaa", "홍길동");
+            // localStorage.setItem("bbb", "이순신");
+            // localStorage.setItem("ccc", JSON.stringify(["a", "b", "c"]));
+
+            // console.log(localStorage.getItem("aaa"));
+            // console.log(localStorage.getItem("bbb"));
+            // console.log(JOSN.parse(localStorage.getItem("ccc")));
+
+            //삭제
+            // localStorage.removeItem("aaa"); //키
+            //전체삭제
+            // localStorage.clear();//전체삭제
+
+            //sessionStorage도 사용방법 동일
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="info">
+
+    </div>
+
+
+    <script>
+        //S9LfRKek%2B30%2Bhr4OphAl2ow17HGbY7Ni57yYoXUhInhKKmAhPcCVKaGIHkDDdXpgO2B7ZRV79fA8R7QdBMR0EQ%3D%3D
+        //mock - 모의객체(REST API와 통신하기 전에 테스트용으로 확인하는 용도)
+        fetch("https://run.mocky.io/v3/f0026144-1a89-4a10-a8f4-3e9263d5698e")
+        .then(function(response) {
+            
+            console.log(response)
+            
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
+            // console.log(data.name);
+            // console.log(data["name"]);
+            // console.log(data.info.phone);
+
+            // var arr = data.data;
+            // for(var i = 0; i < arr.length; i++ ) {
+            //     console.log(arr[i])
+            // }
+            
+            var tag = document.querySelector(".info");
+            tag.innerHTML = data.name + "님 의 나이는 " + data.info.age + "입니다";
+
+        })
+
+    </script>
+
+</body>
+</html>

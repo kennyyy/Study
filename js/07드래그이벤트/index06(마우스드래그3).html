@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section {height: 1000px;}
+        .canvas {border: 1px solid #000; width: 500px; height: 500px;}
+        .box {background-color: red; width: 50px; height: 50px;}
+
+        /* 박스를 옴기기 위한 중요한 디자인 */
+        .canvas {position: relative;}
+        .box {position: absolute; left: 0; top: 0;}
+    </style>
+</head>
+<body>
+    
+    <h3>마우스이벤트를 활용한 박스 옴기기</h3>
+    <section>
+        <div class="canvas" >
+            <div class="box">box</div>
+        </div>
+    </section>
+
+    <script>
+        var canvas = document.querySelector(".canvas");
+        var box = document.querySelector(".box");
+
+        var drag = false;
+        var dev = {x: 0, y: 0}; //box의 클릭한 위치를 보정할 변수
+
+        console.dir(canvas);
+
+        var canvasDev = { x : canvas.offsetLeft, y : canvas.offsetTop } // canvas위치값을 보정할 변수
+
+        document.onmousemove = function() {
+           
+            //마우스를 움직일때 깜빡이는 현상이 있는데, box가 이벤트 버블링을 받기 때문에
+            //5. 깜빡이는 현상은 이벤트 버블링을 허용하기 때문이다.
+            //그다음 상자의 이동을 이벤트기반의 좌표가 아니라
+            //도큐먼트문서의 절대좌표 기준으로 움직이면 됩니다.
+       
+
+            if(drag == false) return;
+
+           
+            box.style.left = event.pageX - dev.x - canvasDev.x + "px";
+            box.style.top = event.pageY - dev.y - canvasDev.y + "px";
+
+            //6. 마우스 canvas를 벗어나면 마우스 이벤트를 받지 못합니다.
+            //이벤트를 document로 변경하고, 해당 box(지금은 .canvus)일때만 동작하도록 바꾸면 됩니다.
+
+        
+        }
+        
+        document.onmousedown = function() {
+            if(event.target != box) 
+                return;
+           
+            drag = true; //움직일 수 있다는 의미
+            dev.x = event.offsetX;
+            dev.y = event.offsetY;
+        }
+        document.onmouseup = function() {
+    
+            drag = false //다시 움직일 수 없음
+        }
+
+    </script>
+
+
+</body>
+</html>

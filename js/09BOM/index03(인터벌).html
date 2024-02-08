@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>active클래스를 옮겨가면서 활성화 시키기 vs 하나씩생성하기</h3>
+
+
+    <div class="box">
+        <img src="img/slide01.jpg" alt="">
+    </div>
+
+    <script>
+        var box = document.querySelector(".box");
+
+        var num = 0;
+
+        function imgChange(){
+            if(num === 3){
+                num = 0;
+            }
+            var img = document.createElement("img");
+            img.src = "img/slide0" + ++num + ".jpg";
+
+            box.firstElementChild.remove();
+
+            box.appendChild(img);
+
+            console.log(img);
+        }
+        (function(){
+            setInterval(imgChange, 1000);
+        })();
+        
+    </script>
+</body>
+</html>

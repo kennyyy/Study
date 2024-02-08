@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>네비게이터 객체</h3>
+
+    <div class="wrap" style="width: 200px; height: 200px;">
+
+    </div>
+
+    <script>
+        //console.log(navigator.userAgent)
+    
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+
+        if(navigator.userAgent.includes("Mobile")){
+            alert("모바일 환경으로 접속합니다. redirect시킵니다.");
+
+        
+            link.href="./css/mobile.css";
+          
+
+        } else if(navigator.userAgent.includes("Chrome")){
+            alert("크롬환경으로 접속합니다. redirect 시킵니다.")
+
+            link.href="./css/chrome.css";
+        }
+
+        document.head.appendChild(link);
+
+    </script>
+
+
+</body>
+</html>

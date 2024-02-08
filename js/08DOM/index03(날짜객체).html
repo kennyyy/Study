@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //현재날짜
+        var date = new Date();//현재 날짜
+        var date2 = new Date("2024-02-02"); // 날짜 지정
+        var date3 = new Date(2024, 2, 2, 14, 20, 30);//날짜 지정2
+
+        
+        //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
+        console.log(date);
+        console.log(date2);
+        console.log(date3);
+
+
+        /////////////////////////////////////////////////////////
+        console.log(Date.now()); //현재시간 밀리초 (날짜 차이를 계산할때 사용)
+        console.log(date.getTime() ); //현재시간 밀리초 (날짜 차이를 계산할때 사용)
+
+        console.log(date.toUTCString() ) //세계협정시
+        console.log(date.toLocaleTimeString() ) //각국의 지역 시간을 나타냄
+        console.log(date.toISOString() ) //세계표준시
+
+        //년 월 일 시분초
+        console.log(date.getFullYear() ) //년
+        console.log(date.getMonth() + 1 ) //월
+        console.log(date.getDate() ) //일
+        console.log(date.getHours() ) //시
+        console.log(date.getMinutes() ) //분
+        console.log(date.getSeconds() ) //초
+
+
+    </script>
+
+</body>
+</html>

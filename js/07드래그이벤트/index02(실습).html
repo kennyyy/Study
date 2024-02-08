@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul, li {list-style: none; padding: 0; margin: 0;}
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .list{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 900px;
+            height: 630px;
+            align-content: space-between;
+        }
+        .list li{width: 25%; border: 1px solid black; width: 180px; height: 280px; padding: 10px;}
+
+        .move{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h3>제목</h3>
+
+        <ul class="list">
+            <li class="box">
+                <img src="./monalisa.png" alt="사진" draggable="true">
+            </li>
+            <li class="box">
+             
+            </li>
+            <li class="box">
+               
+            </li>
+            <li class="box">
+              
+            </li>
+            <li class="box">
+              
+            </li>
+
+            <li class="box">
+              
+            </li>
+
+            <li class="box">
+             
+            </li>
+
+            <li class="box">
+
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var body = document.querySelector(body);
+        var list = document.querySelector(".list");
+        var mona = document.querySelector(".box > img");
+
+        // list.addEventListener("dragstart", function(){
+        //     mona = event.target;
+        // })
+
+        list.addEventListener("dragover", function(){
+            event.preventDefault(); 
+        })
+        
+
+        list.addEventListener("drop", function(){
+            if(event.target.tagName != "LI") return;
+            console.log(event);
+            event.preventDefault();
+            event.target.appendChild(mona);
+        })
+
+
+
+
+
+
+
+
+
+
+
+        list.addEventListener("dragend", function(){
+            console.log(event);
+            console.dir(event.target);
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+
+        .list li {
+            display: inline-block;
+            width: 600px;
+        }
+
+        .list li img {
+            width: 100%;
+        }
+
+  
+    </style>
+
+    <ul class="list">
+    </ul>
+
+
+    <script>
+        var list = document.querySelector(".list");
+
+        var arr = JSON.parse(localStorage.getItem("imgArr"));
+        console.log(arr);
+
+        for (i in arr) {
+            var li = document.createElement("li");
+            var img = document.createElement("img");
+            img.src = arr[i];
+
+            li.appendChild(img);
+            list.appendChild(li)
+        }
+
+
+
+        //console.log(localStorage);
+        //저장 - 문자열 밖에 저장을 못함
+        // localStorage.setItem("aaa", "홍길동");
+        // localStorage.setItem("bbb", "이순신");
+        // localStorage.setItem("ccc", JSON.stringify(["a", "b", "c"]));
+
+        // console.log(localStorage.getItem("aaa"));
+        // console.log(localStorage.getItem("bbb"));
+        // console.log(JOSN.parse(localStorage.getItem("ccc")));
+
+        //삭제
+        // localStorage.removeItem("aaa"); //키
+        //전체삭제
+        // localStorage.clear();//전체삭제
+
+        //sessionStorage도 사용방법 동일
+    </script>
+</body>
+
+</html>

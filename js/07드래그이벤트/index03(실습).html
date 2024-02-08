@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .items-wrap {
+            width: 65%;
+
+        }
+
+        .drop-wrap {
+            width: 25%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            height: 800px;
+        }
+
+        .list li {
+            width: 25%;
+            text-align: center;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .box li {
+            line-height: 50px;
+            border: 1px solid black;
+        }
+
+        .box {
+
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>드랍아이템 만들기</h2>
+
+    <section class="section-wrap">
+        <div class="items-wrap">
+            <ul class="list">
+                <li draggable="true"><span>아이템1</span></li>
+                <li draggable="true"><span>아이템2</span></li>
+                <li draggable="true"><span>아이템3</span></li>
+                <li draggable="true"><span>아이템4</span></li>
+                <li draggable="true"><span>아이템5</span></li>
+                <li draggable="true"><span>아이템6</span></li>
+                <li draggable="true"><span>아이템7</span></li>
+                <li draggable="true"><span>아이템8</span></li>
+            </ul>
+        </div>
+
+        <div class="drop-wrap">
+            <h1>여기에 드랍하세요.</h1>
+            <ul class="box">
+
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        var wrap = document.querySelector(".section-wrap");
+        var list = document.querySelector(".list");
+        var box = document.querySelector(".box");
+
+        var item = null;
+
+        wrap.addEventListener("dragstart", function () {
+            if (event.target.tagName != "LI") return;
+            item = event.target.cloneNode(true);
+        })
+
+        box.addEventListener("dragenter", function () {
+            box.style.border = "1px solid blue"
+
+        })
+
+        wrap.addEventListener("dragover", function () {
+            event.preventDefault();
+        })
+
+        wrap.addEventListener("drop", function () {
+            if (event.target.tagName != "UL") return;
+            event.preventDefault();
+            event.target.appendChild(item);
+        })
+
+    </script>
+</body>
+
+</html>
