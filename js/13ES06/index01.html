@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>let 과 const변수</h3>
+
+    <ul class="box">
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ul>
+
+    <script>
+        //let 변수는 중복선언 x,  유효범위는 중괄호 스코프
+
+        let a = 1;
+        //let a = "a";
+
+        if (true) {
+            let a = 100;
+            let b = 10;
+            console.log(a);//let의 유효범위 - 중괄호 스코프
+        }
+
+        console.log(a);
+        //console.log(b); b is not defined
+
+        console.log("--------------------------------------------");
+
+        //li에 이벤트를 건다. (반복)
+
+        var lis = document.querySelectorAll(".box li");
+
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].addEventListener("click", function(){
+                                                    //var변수는 허용범위가 함수임므로 여기서는 전역동작해서 값이 바뀌어 있다.
+                                                    //let으로 허용범위가 블록이므로 내가 원하는 값이 나온다
+                console.log("이벤트가 잘 걸렸나?", i); //이벤트가 잘 걸렸나? 4
+            });
+        }
+
+        console.log("--------------------------------------------");
+
+        const GENDER = "남자"; //상수
+        //GENDER = "여자"; //변경불가
+
+        const arr = ["홍길동", "이순신"]
+        //arr = ["홍길자"]; //배열 자체를 바꾸는것은 불가
+
+        arr[0] = "홍길자"; //배열 요소의 변경은 허용
+        arr.push("둘리");
+        arr.unshift("또치");
+        console.log(arr);
+
+
+        const PERSON = {age : 20}
+        //PERSON = {name : "홍길동"}; //객체 자체를 바꾸는것은 불가
+
+        PERSON.age = 30; //내부의 값의 변경은 허용
+        PERSON.name = "홍길동";
+        console.log(PERSON)
+
+    </script>
+
+</body>
+
+</html>

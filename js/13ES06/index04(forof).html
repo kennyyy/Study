@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var arr = ['a', 'b', 'c'];
+
+        for(let i in arr){
+            console.log(i); //인덱스
+        }
+
+        for(let i of arr){
+            console.log(i); //값
+        }
+        console.log("-------------------------");
+
+        const arr2 = [ 
+            {id : "aaa123", age : 20},
+            {id : "bbb123", age : 30} 
+        ]
+
+        for(let {id, age} of arr2){ //객체로 받으면 구조분해할당 가능(당연한 것)
+            console.log(id, age);
+        }
+    </script>
+    
+</body>
+</html>

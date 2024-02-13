@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //익명함수
+        //a();
+
+        //익명함수는 호이스팅(x)
+        // let a = function(){
+        //     console.log(1);
+        // }
+        
+        //익명함수는 arrow 함수로 대체가 가능하다.
+        let a = () =>{
+            console.log(1);
+        }
+        
+        //문법 1 - 구문이 1개면, {} 생략이 됩니다. 그리고 자동으로 리턴됩니다.
+        //2개이상이면 {}넣어야합니다.
+
+        //let b = () => console.log(1);
+        let b = (a, b) => console.log(a+b);
+        b(1,2);
+
+        let c = (a) => a + 10; //자동 리턴
+        console.log(c(10));
+
+        //문법2 - 매개변수가 1개라면, () 생략이 됩니다.
+        let d = a => a + 10; //함수
+        // let d = a => {
+        //     a + 10;
+        // }
+        console.log(d(10));
+
+        //문법3 - 객체를 리턴하고 싶으면 ()로 묶으면 됩니다.
+        // let e = () => {
+        //     return {key : 20}
+        // }
+
+        let e = () => ({key : 20}) //위와 같은 구문
+        console.log(e());
+
+        let f = a => ({key : a})
+        console.log(f(10));
+
+        //setInterval(function() {}, 2000)
+        //setInterval( () => {}, 2000)
+        //x.addEventListener('click', () => {});
+
+        //fetch("~~~").then(function(response) {})
+        //fetch("~~~").then( (response) => {})
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = [1,2,3];
+        console.log(...arr); //펄쳐서 나열함 (나열한 값들은 배열아님)
+
+
+        //배열에 배열을 추가
+        const num = [10,20,30, ...arr];
+        console.log(num);
+
+  
+
+        //중간에 추가
+        const num2 = [10,...arr, 20,30];
+        console.log(num2);
+    
+        //배열 복사
+        const num3 = [...arr];
+        console.log(num3);
+        
+        //배열의 병합
+        console.log(arr.concat(arr));
+        console.log([...arr, ...arr]);
+
+        console.log("-----------------------------------------");
+        //함수에서 전개구문
+
+        function func(x, y, z){
+            return x + y + z;
+        }
+        console.log(func(1,2,3));
+        console.log(func(...arr)); //func(1,2,3)
+        console.log(func(1, 2, ...arr)); //func(1,2,1,2,3)
+
+        //가변매개변수
+        //가변적 매개변수가 될 수 있음.
+        function func2(x,y, ...z){
+            return [x,y, ...z];
+        }
+
+        console.log(func2(1,2,3));
+        console.log(func2(1,2,3,4));
+        console.log(func2(1,2,3,4,5,6));
+
+        //default매개변수
+        //어떤 순서로든 기본 파라미터를 사용할 수 있으며,
+        //이는 기본 파라미터 이후에 기본 파라미터가 아닌 파라미터를 사용할 수 있음을 의미합니다.
+        function func3(x, y = 10, z = 20){
+            console.log( x + y + z);
+        }
+        func3(10);
+        func3(10, 20);
+        func3(10, 20, 30);
+        
+
+    </script>
+
+
+</body>
+</html>
