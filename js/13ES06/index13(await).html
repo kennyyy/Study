@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    const func1 = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success1");
+        }, 5000)
+      })
+    }
+
+
+    const func2 = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success2");
+        }, 2000)
+      })
+    }
+
+    const func3 = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success3");
+        }, 3000)
+      })
+    }
+
+    //return promise니깐 .then가능
+    //func1().then(data => console.log(data))//5초
+    //func2().then(data => console.log(data))//2초
+    //func3().then(data => console.log(data))//3초
+
+    //비동기적인 실행 => 반드시 순서 보장을 받아야 한다면?
+    // func1().then(data => {
+    //   console.log(data)
+
+    //   func2().then(data => {
+    //     console.log(data);
+
+    //     func3().then((data)=>{
+    //       console.log(data);
+    //     })
+    //   })
+    // })
+
+    //await => asnyc안에서 사용할 수 있고, return이 promise인 곳에 적용할 수 있음
+    //         await이 적용되면, then을 생략하고, 결과를 바로 받을 수 있음
+
+    (async function() {
+      let result = await func1();
+      console.log(result);
+
+      let result2 = await func2();
+      console.log(result2);
+
+      let result3 = await func3();
+      console.log(result3);
+    })()
+    ////////////////////////////////
+    //asnyc는 return을 promise로 바꾼다
+
+    const myFetch = async () =>{
+      return "data...";
+    }
+
+    let result = myFetch();
+    console.log(resultr);
+
+   
+
+  </script>
+
+</body>
+
+</html>

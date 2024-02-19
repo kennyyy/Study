@@ -1,71 +1,22 @@
-import { useState } from "react"
-import axios from 'axios';
+import A from "./component2/A";
+import B from "./component2/B";
+import { UserProvider } from "./contextAPI/ContextAPI2";
 
 function App() {
-  const [data, setData] = useState(null);
-
-  let handleClick = async () => {
-    //let Promise = axios.get()
-    // axios.get('https://run.mocky.io/v3/f0026144-1a89-4a10-a8f4-3e9263d5698e')
-    // .then( response => setData(response.data) )
-
-    //시나리오
-    //순서대로 데이터를 3개를 가져와 볼거에요
-    //비동기는 순서보장을 하지 않는다는 점!
-    // axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/hi.json')
-    // .then( response => console.log(response.data) )
-
-    // axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/hello.json')
-    // .then( response => console.log(response.data) )
-
-    // axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/by.json')
-    // .then( response => console.log(response.data) )
-
-
-    // 순서를 보장 받으려면 콜백지옥을 만들어야 하는데, async, await으로 깔끔하게 해결할 수 있습니다
-    // axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/hi.json')
-    // .then( response => {
-    //   console.log(response.data); //hi.json도착
-
-    //   axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/hello.json')
-    //   .then( response => {
-    //     console.log(response.data); //hello.json도착
-
-    //     axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/by.json')
-    //     .then( response => {
-    //       console.log(response.data); //by.json도착
-    //     })
-    //   })
-    // })
-
-    const response = await axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/hi.json')
-    console.log(response.data); //hi.json
-
-    const response2 = await axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/hello.json')
-    console.log(response2.data); //hello.json
-
-    const response3 = await axios.get('https://raw.githubusercontent.com/yopy0817/data_example/master/by.json')
-    console.log(response3.data); //by.json
-
-
-
-  }
-
   return (
-    <div>
-      <h3>엑시오스 사용하기</h3>
+    <>
+      <div>
+        <h3>ContextAPI 분리하기</h3>
+        {/* 4. provider의 사용 */}
+        <UserProvider>
+          <A />
+          <B />
+        </UserProvider>
 
-      <button type="button" onClick={handleClick}>클릭시 데이터 가져오기</button>
 
-
-      {
-        data &&
-        <div>
-          짠 : {data.name}
-        </div>
-      }
-    </div>
+      </div>
+    </>
   )
 }
 
-export default App
+export default App;
