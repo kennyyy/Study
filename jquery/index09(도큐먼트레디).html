@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <script>
+    //js가 태그보다 위에 있어서, 화면 로딩전에 이벤트 등록이 일어남 (동작x)
+    //$("#btn").click(function () {
+    //    alert("버튼 누름");
+     // })
+
+    //화면이 로드된 이후에 실행
+    $(document).ready(function () {
+      $("#btn").click(function () {
+        alert("버튼 누름");
+      })
+    })
+
+
+
+    //JS의 window.onload는 단 한번 사용 가능하지만,
+    //Jquery의 document.ready는 여러 번 사용 가능합니다.
+    $(document).ready(function () {
+      $("#btn").click(function () {
+        alert("버튼 누름22222222222222222222222222");
+      })
+    })
+
+  </script>
+
+
+  <button id="btn">버튼</button>
+</body>
+
+</html>

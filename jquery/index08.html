@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <div class="box">
+
+
+  </div>
+
+  <button id="btn">클릭</button>
+  
+  <script>
+    $("#btn").click(function(){
+      var str = "";
+      str += "<a href='#'>박스1</a>";
+      str += "<a href='#'>박스2</a>";
+      str += "<a href='#'>박스3</a>";
+
+
+
+      $(".box").html(str)
+    });
+
+    //이벤트가 안걸림 - a태그가 뒤늦게 생성되기 때문에.
+    $(".box > a").click(function(){
+      console.log("동작할까?");
+    })
+
+    //이벤트 위임방식, 부모에 걸고 자식으로 전파 on(이벤트종류, 전파할 자식 선택자, 함수)
+    $(".box").on("click", "a", function () {
+      console.log("동작할까?");
+    })
+
+  </script>
+
+  <h3>on함수는 이벤트 체인</h3>
+
+  <div class="box2" style="width: 100px; height: 100px; border: 1px solid #777;">
+  
+  </div>
+
+  <script>
+  $(".box2").on("mouseenter", function(){
+    console.log("마우스진입");
+  }).on("mouseleave", function(){
+    console.log("마우스아웃");
+  }).on("mousemove", function(){
+    console.log("움직이는중");
+  })
+
+  </script>
+</body>
+</html>

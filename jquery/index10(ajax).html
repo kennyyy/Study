@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <p class="title"></p>
+  <script>
+    //화면 로드후에 서버에서 데이터를 로드
+    $(document).ready(function(){
+      $.ajax({
+        type : "GET", //요청형식
+        url : "http://localhost:8181/getData?id=홍길동&age=20",
+        success : function(data){
+          console.log(data);
+          //js능력에 따라서 여기서 프로그램 코드를 처리
+          $(".title").html(data);
+        },
+        error : function(err, status){
+          console.log(err);
+          console.log(status);
+
+        }
+      })
+    })
+
+    $.ajax({
+        type : "POST", //요청형식
+        url : "http://localhost:8181/getJSON2", //요청주소
+        data : JSON.stringify({name : "홍길동", age : 20}), //보내는 데이터
+        contentType : "application/json",//내가 보내는 데이터에 대한 타입
+        //dataType : "json",//서버로 요청하는 데이터에 대한 타입(이걸로 줘), xml, json, html, text (생략가능)
+        success : function(data){
+          console.log(data);
+          //js능력에 따라서 여기서 프로그램 코드를 처리
+          $(".title").html(data);
+        },
+        error : function(err, status){
+          console.log(err);
+          console.log(status);
+        }
+        
+    })
+
+
+    
+
+
+  </script>
+
+  
+  
+</body>
+</html>

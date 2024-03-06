@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="./js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <input type="text" id="apple" value="홍길동">
+    <input type="text" class="melon" value="홍길동">
+
+    <script>
+      var a = document.getElementById("apple").value;// 순수 js
+      
+
+      var b = $("#apple").val() //제이커리
+
+      console.log(a, b);
+
+      console.log($("#apple")); //제이쿼리 함수를 적용할 수 있는 객체를 반환
+      console.log($("#apple")[0]); //0번키에는 해당 태그 엘리먼트를 넣어준다.
+      console.log($("#apple")[0].value); //js
+
+      //c = js, d = jquery
+      var c = document.querySelector(".melon").value;
+      var d = $(".melon").val(); 
+    
+      //제이커리 함수들은 오버로딩 매개변수의 개수에 따라서 다르게 동작
+      //document.querySelector(".melon").value = "홍길자";
+      $(".melon").val("홍길자");
+    </script>
+</body>
+</html>
